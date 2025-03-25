@@ -6,7 +6,7 @@ import amongus from '../../../public/bgcards/amongus.webp';
 import beingsofgreatconsciousnessandlove from '../../../public/bgcards/beings-of-great-consciousness-and-love.webp';
 import brightstarinourencounter from '../../../public/bgcards/brightstarinourencounter.webp';
 import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp';
-import btocmec from '../../../public/bgcards/btomec.webp';
+import btocmec from '/src/assets/bgcards/btomec.webp';
 import calculadora from '../../../public/bgcards/calculadora.gif';
 import cardapio from '../../../public/bgcards/cardapio.gif';
 import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp';
@@ -44,7 +44,7 @@ import rickandmorty from '../../../public/bgcards/rickandmorty.gif';
 import soundtracker from '../../../public/bgcards/soundtracker.gif';
 import souzaadv from '../../../public/bgcards/souzaadv.webp';
 import splitmind from '../../../public/bgcards/splitmind.webp';
-import starsentry from '../../../public/bgcards/starsentry.webp';
+import starsentry from '/src/assets/bgcards/starsentry.webp';
 import theamazinglooperman from '../../../public/bgcards/theamazinglooperman.gif';
 import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
 import thewalkingdead from '../../../public/bgcards/thewalkingdead.gif';
@@ -65,65 +65,56 @@ export interface Project {
   name: string;
   type: 'website' | 'game';
   imageUrl: string;
+  projectUrl: string;
 }
 
-// Images from Unsplash for project thumbnails
+// Images
 const images = [
-  spaceoddysey,
+  btocmec,
+  starsentry,
 ];
 
 // Generate website names
 const websiteNames = [
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
-  'Space Oddysey',
+  "BTOMEC",
+  "StarSentry",
 ];
 
 // Generate game names
-const gameNames = [
-    
+const gameNames = [  
+];
+
+// Generate url
+const projectUrl = [
+    "https://btomec.vercel.app",
+    "https://starsentry.vercel.app",
 ];
 
 // Generate projects
 export const generateProjects = (): Project[] => {
   const projects: Project[] = [];
   
-  // Generate 35 websites
+  // Websites
   for (let i = 0; i < websiteNames.length; i++) {
     projects.push({
       id: i + 1,
       name: websiteNames[i],
       type: 'website',
       imageUrl: `${images[i % images.length]}`,
+      projectUrl: projectUrl[i]
     });
   }
   
-  // Generate 24 games
+  // Games
   for (let i = 0; i < gameNames.length; i++) {
     projects.push({
       id: i + 1,
       name: gameNames[i],
       type: 'game',
       imageUrl: `${images[(i)]}`,
+      projectUrl: projectUrl[i]
     });
   }
-  
   return projects;
 };
 
