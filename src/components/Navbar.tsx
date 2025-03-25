@@ -70,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeFilter, setActiveFilter }) => {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a 
-              href="https://github.com" 
+              href="https://github.com/tonnon" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white/80 hover:text-white transition-colors"
@@ -79,7 +79,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeFilter, setActiveFilter }) => {
               <Github size={20} className="hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/lucastonnon/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white/80 hover:text-white transition-colors"
