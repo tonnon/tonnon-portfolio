@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 270 50% 3%;
+    --foreground: 0 0% 98%;
+
+    --card: 270 50% 3%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 270 50% 3%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 270 65% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 270 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 270 30% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 270 80% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 270 30% 20%;
+    --input: 270 30% 20%;
+    --ring: 270 65% 50%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Improved smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* For Safari and other browsers that don't support scroll-behavior */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(270 50% 3% / 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(270 65% 45% / 0.7);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(270 65% 55% / 0.8);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes neonGlow {
+  0% { box-shadow: 0 0 2px 0 rgba(138, 43, 226, 0.4); }
+  50% { box-shadow: 0 0 10px 3px rgba(138, 43, 226, 0.7); } /* Made smaller */
+  100% { box-shadow: 0 0 2px 0 rgba(138, 43, 226, 0.4); }
+}
+
+@keyframes neonPulse {
+  0% { filter: drop-shadow(0 0 1px rgba(138, 43, 226, 0.7)); }
+  50% { filter: drop-shadow(0 0 8px rgba(138, 43, 226, 1)); } /* Made smaller */
+  100% { filter: drop-shadow(0 0 1px rgba(138, 43, 226, 0.7)); }
+}
+
+/* Utility classes */
+.glass {
+  @apply backdrop-blur-md bg-black/20 border-x border-b border-white/10;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite; /* Slowed down */
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s ease-in-out infinite; /* Slowed down */
+}
+
+.animate-rotate {
+  animation: rotate 40s linear infinite; /* Slowed down */
+}
+
+.neon-glow:hover {
+  animation: neonGlow 2.5s ease-in-out infinite; /* Slowed down */
+}
+
+.neon-text {
+  animation: neonPulse 3s ease-in-out infinite; /* Slowed down */
+}
