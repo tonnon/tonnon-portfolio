@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeFilter, setActiveFilter }) => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-20">
-      <div className="glass py-4 px-6 backdrop-blur-lg bg-black/30 border-t-0">
+      <div className="glass py-4 px-4 backdrop-blur-lg bg-black/30 border-t-0">
         <nav className="mw-full mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
