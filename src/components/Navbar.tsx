@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeFilter, setActiveFilter }) => {
           </div>
           
           {/* Navigation Links */}
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full glass backdrop-blur-md bg-black/20">
+          <div className="flex items-center gap-2 px-1 py-1 rounded-full glass backdrop-blur-md bg-black/20">
             {[
               {id: 'Todos', label: 'All'}, 
               {id: 'Websites', label: 'Websites'}, 
