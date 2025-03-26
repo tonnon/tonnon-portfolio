@@ -9,13 +9,13 @@ export default function Video() {
   }, []);
 
   return (
-    <div className="fixed top-[-385px] left-0 w-full h-screen flex justify-center items-center z-[-1] overflow-hidden">
+    <div className="fixed top-[-395px] left-0 w-full h-screen flex justify-center items-center z-[-1] overflow-hidden">
       <video 
         autoPlay
         muted
         loop
         preload="auto"
-        className={`rotate-180 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ${videoLoaded ? 'opacity-80' : ''}`}
+        className={`rotate-180 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ${videoLoaded ? 'opacity-40' : ''}`}
       >
         <source 
           src="/blackhole.mp4" 
