@@ -9,7 +9,7 @@ export default function Video() {
   }, []);
 
   return (
-    <div className="fixed top-[-395px] left-0 w-full h-screen flex justify-center items-center z-[-1] overflow-hidden">
+    <div className="fixed top-[70px] left-0 w-full h-screen flex justify-center items-center z-[-1] overflow-hidden transform -translate-y-1/2">
       <video 
         autoPlay
         muted
