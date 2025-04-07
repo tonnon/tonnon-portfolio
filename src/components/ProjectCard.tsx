@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Project } from '@/data/projects';
+import { Project } from '../data/projects';
 
 interface ProjectCardProps {
   project: Project;
