@@ -1,7 +1,4 @@
 {
-  "files": [],
-  "references": [
-  ],
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -13,5 +10,6 @@
     "allowJs": true,
     "noUnusedLocals": false,
     "strictNullChecks": false
-  }
+  },
+  "include": ["src"]
 }
