@@ -1,17 +1,18 @@
-import spaceoddysey from '/src/assets/bgcards/2001-space-oddysey.gif';
+/* import spaceoddysey from '/src/assets/bgcards/2001-space-oddysey.gif';
 import adidas from '/src/assets/bgcards/adidas.gif';
 import afilosfiadaviagemdotempo from '../../../public/bgcards/a-filosofia-da-viagem-no-tempo.gif';
 import alongnight from '../../../public/bgcards/alongnight.gif';
 import amongus from '../../../public/bgcards/amongus.webp';
 import beingsofgreatconsciousnessandlove from '../../../public/bgcards/beings-of-great-consciousness-and-love.webp';
 import brightstarinourencounter from '../../../public/bgcards/brightstarinourencounter.webp';
-import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp';
+import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp'; */
 import btocmec from '/src/assets/bgcards/btomec.webp';
-import calculadora from '../../../public/bgcards/calculadora.gif';
+/* import calculadora from '../../../public/bgcards/calculadora.gif';
 import cardapio from '../../../public/bgcards/cardapio.gif';
 import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp';
-import cyberpool from '../../../public/bgcards/cyberpool.webp';
-import cybersnake from '../../../public/bgcards/cybersnake.webp';
+import cyberpool from '../../../public/bgcards/cyberpool.webp'; */
+import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
+/* import cybersnake from '../../../public/bgcards/cybersnake.webp';
 import deadgods from '../../../public/bgcards/deadgods.gif';
 import deusesastronautas from '../../../public/bgcards/deusesastronautas.gif';
 import eclipsers from '../../../public/bgcards/eclipsers.gif';
@@ -43,9 +44,9 @@ import powerofthepeople from '../../../public/bgcards/powerofthepeople.webp';
 import rickandmorty from '../../../public/bgcards/rickandmorty.gif';
 import soundtracker from '../../../public/bgcards/soundtracker.gif';
 import souzaadv from '../../../public/bgcards/souzaadv.webp';
-import splitmind from '../../../public/bgcards/splitmind.webp';
+import splitmind from '../../../public/bgcards/splitmind.webp'; */
 import starsentry from '/src/assets/bgcards/starsentry.webp';
-import theamazinglooperman from '../../../public/bgcards/theamazinglooperman.gif';
+/* import theamazinglooperman from '../../../public/bgcards/theamazinglooperman.gif';
 import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
 import thewalkingdead from '../../../public/bgcards/thewalkingdead.gif';
 import thingsthatialwayswantedsaytoyou from '../../../public/bgcards/thingsthatialwayswantedsaytoyou.webp';
@@ -56,67 +57,48 @@ import verificacaoemail from '../../../public/bgcards/verificacaoemail.gif';
 import waroftheworlds from '../../../public/bgcards/war-of-the-worlds.gif';
 import wavesofjoy from '../../../public/bgcards/wavesofjoy.webp';
 import youshinelikefireworksonthisemptytown from '../../../public/bgcards/youshinelikefireworksonthisemptytown.webp';
-import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp';
+import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp'; */
 
-
-// Generate 59 projects with a mix of websites and games
-export interface Project {
+ export interface Project {
   id: number;
   name: string;
   type: 'website' | 'game';
   imageUrl: string;
   projectUrl: string;
-}
+} 
 
-// Images
-const images = [
-  btocmec,
-  starsentry,
-];
-
-// Generate website names
-const websiteNames = [
-  "BTOMEC",
-  "StarSentry",
-];
-
-// Generate game names
-const gameNames = [  
-];
-
-// Generate url
-const projectUrl = [
-    "https://btomec.vercel.app",
-    "https://starsentry.vercel.app",
+const projectData: Omit<Project, 'id'>[] = [
+  {
+    name: "BTOMEC",
+    type: 'website',
+    imageUrl: btocmec,
+    projectUrl: "https://btomec.vercel.app"
+  },
+  {
+    name: "Cybertetromino",
+    type: 'game',
+    imageUrl: cybertetromino,
+    projectUrl: "https://cybertetromino.vercel.app"
+  },
+  {
+    name: "StarSentry",
+    type: 'website',
+    imageUrl: starsentry,
+    projectUrl: "https://starsentry.vercel.app"
+  },
 ];
 
 // Generate projects
 export const generateProjects = (): Project[] => {
-  const projects: Project[] = [];
-  
-  // Websites
-  for (let i = 0; i < websiteNames.length; i++) {
-    projects.push({
-      id: i + 1,
-      name: websiteNames[i],
-      type: 'website',
-      imageUrl: `${images[i % images.length]}`,
-      projectUrl: projectUrl[i]
-    });
-  }
-  
-  // Games
-  for (let i = 0; i < gameNames.length; i++) {
-    projects.push({
-      id: i + 1,
-      name: gameNames[i],
-      type: 'game',
-      imageUrl: `${images[(i)]}`,
-      projectUrl: projectUrl[i]
-    });
-  }
-  return projects;
+  return projectData.map((project, index) => ({
+    id: index + 1,
+    name: project.name,
+    type: project.type,
+    imageUrl: project.imageUrl,
+    projectUrl: project.projectUrl
+  }));
 };
+console.log(generateProjects())
 
 // Export the generated projects
 export const projects = generateProjects();
