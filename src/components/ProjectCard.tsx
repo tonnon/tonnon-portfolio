@@ -70,6 +70,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         
         <div className="p-4">
           <h3 className="text-lg font-medium text-white truncate">{project.name}</h3>
+          <p className="font-thin text-xs">{project.desc}</p>
           <span 
             className={`inline-block mt-2 px-3 py-1 text-xs rounded-full text-purple-200 transition-all duration-300 ${
               isHovered 

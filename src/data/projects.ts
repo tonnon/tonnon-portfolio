@@ -62,6 +62,7 @@ import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-
  export interface Project {
   id: number;
   name: string;
+  desc: string;
   type: 'website' | 'game';
   imageUrl: string;
   projectUrl: string;
@@ -71,18 +72,21 @@ const projectData: Omit<Project, 'id'>[] = [
   {
     name: "BTOMEC",
     type: 'website',
+    desc: 'Empresa especializada na fabricação de moldes de alta precisão para os setores de cosméticos, farmacêutico, higiene e alimentício.',
     imageUrl: btocmec,
     projectUrl: "https://btomec.vercel.app"
   },
   {
     name: "Cybertetromino",
     type: 'game',
+    desc: 'Futuristic twist on the classic Tetris game — reimagined with a sleek cyberpunk aesthetic.',
     imageUrl: cybertetromino,
     projectUrl: "https://cybertetromino.vercel.app"
   },
   {
     name: "StarSentry",
     type: 'website',
+    desc: 'A modern space traffic management system. This platform provides real-time tracking, collision predictions, and trajectory optimization for space objects.',
     imageUrl: starsentry,
     projectUrl: "https://starsentry.vercel.app"
   },
@@ -94,6 +98,7 @@ export const generateProjects = (): Project[] => {
     id: index + 1,
     name: project.name,
     type: project.type,
+    desc: project.desc,
     imageUrl: project.imageUrl,
     projectUrl: project.projectUrl
   }));
