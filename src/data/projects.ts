@@ -12,11 +12,11 @@ import cardapio from '../../../public/bgcards/cardapio.gif';
 import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp';
 import cyberpool from '../../../public/bgcards/cyberpool.webp'; */
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
-/* import cybersnake from '../../../public/bgcards/cybersnake.webp';
+/*  import cybersnake from '../../../public/bgcards/cybersnake.webp';
 import deadgods from '../../../public/bgcards/deadgods.gif';
-import deusesastronautas from '../../../public/bgcards/deusesastronautas.gif';
-import eclipsers from '../../../public/bgcards/eclipsers.gif';
-import eventplataform from '../../../public/bgcards/eventplataform.webp';
+import deusesastronautas from '../../../public/bgcards/deusesastronautas.gif'; */
+import eclipsers from '/src/assets/bgcards/eclipsers.gif';
+/* import eventplataform from '../../../public/bgcards/eventplataform.webp';
 import everydayisaroughtime from '../../../public/bgcards/everydayisaroughtime.gif';
 import experimentaltruchettiles from '../../../public/bgcards/experimentaltruchettiles.webp';
 import feedbackwidget from '../../../public/bgcards/feedbackwidget.webp';
@@ -45,7 +45,7 @@ import rickandmorty from '../../../public/bgcards/rickandmorty.gif';
 import soundtracker from '../../../public/bgcards/soundtracker.gif';
 import souzaadv from '../../../public/bgcards/souzaadv.webp';
 import splitmind from '../../../public/bgcards/splitmind.webp'; */
-import starsentry from '/src/assets/bgcards/starsentry.webp';
+import starsentry from '/src/assets/bgcards/starsentry.webp'; 
 /* import theamazinglooperman from '../../../public/bgcards/theamazinglooperman.gif';
 import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
 import thewalkingdead from '../../../public/bgcards/thewalkingdead.gif';
@@ -82,6 +82,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'Futuristic twist on the classic Tetris game — reimagined with a sleek cyberpunk aesthetic.',
     imageUrl: cybertetromino,
     projectUrl: "https://cybertetromino.vercel.app"
+  },
+  {
+    name: "Eclipsers",
+    type: 'website',
+    desc: 'Eclipsers is a modern and responsive social network designed for eclipse enthusiasts from around the globe.',
+    imageUrl: eclipsers,
+    projectUrl: "https://eclipsers.vercel.app"
   },
   {
     name: "StarSentry",
