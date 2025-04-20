@@ -16,6 +16,7 @@ import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 import deadgods from '../../../public/bgcards/deadgods.gif';
 import deusesastronautas from '../../../public/bgcards/deusesastronautas.gif'; */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
+import ecotech from '/src/assets/bgcards/ecotech.gif';
 /* import eventplataform from '../../../public/bgcards/eventplataform.webp';
 import everydayisaroughtime from '../../../public/bgcards/everydayisaroughtime.gif';
 import experimentaltruchettiles from '../../../public/bgcards/experimentaltruchettiles.webp';
@@ -89,6 +90,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'Eclipsers is a modern and responsive social network designed for eclipse enthusiasts from around the globe.',
     imageUrl: eclipsers,
     projectUrl: "https://eclipsers.vercel.app"
+  },
+  {
+    name: "EcoTech",
+    type: 'website',
+    desc: 'Este projeto explora os impactos ambientais e sociais do lixo eletrônico no mundo moderno.',
+    imageUrl: ecotech,
+    projectUrl: "https://tonnon.github.io/ecotech/"
   },
   {
     name: "StarSentry",
