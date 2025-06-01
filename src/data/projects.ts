@@ -47,8 +47,8 @@ import soundtracker from '../../../public/bgcards/soundtracker.gif';
 import souzaadv from '../../../public/bgcards/souzaadv.webp';
 import splitmind from '../../../public/bgcards/splitmind.webp'; */
 import starsentry from '/src/assets/bgcards/starsentry.webp'; 
-/* import theamazinglooperman from '../../../public/bgcards/theamazinglooperman.gif';
-import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
+import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
+/* import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
 import thewalkingdead from '../../../public/bgcards/thewalkingdead.gif';
 import thingsthatialwayswantedsaytoyou from '../../../public/bgcards/thingsthatialwayswantedsaytoyou.webp';
 import twinsistersfromtheshinning from '../../../public/bgcards/twinsistersfromtheshinning.webp';
@@ -58,7 +58,7 @@ import verificacaoemail from '../../../public/bgcards/verificacaoemail.gif';
 import waroftheworlds from '../../../public/bgcards/war-of-the-worlds.gif';
 import wavesofjoy from '../../../public/bgcards/wavesofjoy.webp';
 import youshinelikefireworksonthisemptytown from '../../../public/bgcards/youshinelikefireworksonthisemptytown.webp';
-import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp'; */
+import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp';  */
 
  export interface Project {
   id: number;
@@ -103,6 +103,13 @@ const projectData: Omit<Project, 'id'>[] = [
     type: 'website',
     desc: 'A modern space traffic management system. This platform provides real-time tracking, collision predictions, and trajectory optimization for space objects.',
     imageUrl: starsentry,
+    projectUrl: "https://starsentry.vercel.app"
+  },
+  {
+    name: "The Amazing Looperman",
+    type: 'game',
+    desc: "The Amazing Looperman is a fast-paced arcade game where your goal is simple: survive. Dodge incoming enemies, avoid collisions, and stay alive as long as you can in this endless challenge.",
+    imageUrl: theamazinglooperman,
     projectUrl: "https://starsentry.vercel.app"
   },
 ];
