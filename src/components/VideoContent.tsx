@@ -11,9 +11,7 @@ const VideoContent = ({ isLoaded }: VideoContentProps) => {
     const video = videoRef.current;
     if (!video) return;
     
-    // Optimize video performance when it's loaded
     if (isLoaded) {
-      // Make sure video is playing
       video.play().catch(err => console.error('Error playing video:', err));
     }
   }, [isLoaded]);
@@ -28,9 +26,9 @@ const VideoContent = ({ isLoaded }: VideoContentProps) => {
       preload="auto"
       className={`w-full h-full object-cover opacity-0 transition-opacity duration-500 ${isLoaded ? 'opacity-40' : ''}`}
       style={{
-        transform: 'scale(0.75) rotate(180deg)', // Scale down to reduce memory usage
+        transform: 'scale(0.75) rotate(180deg)',
         objectFit: 'cover',
-        willChange: 'transform', // Hardware acceleration hint
+        willChange: 'transform',
       }}
     >
       <source 

@@ -110,11 +110,10 @@ const projectData: Omit<Project, 'id'>[] = [
     type: 'game',
     desc: "The Amazing Looperman is a fast-paced arcade game where your goal is simple: survive. Dodge incoming enemies, avoid collisions, and stay alive as long as you can in this endless challenge.",
     imageUrl: theamazinglooperman,
-    projectUrl: "https://starsentry.vercel.app"
+    projectUrl: "https://the-amazing-looperman.vercel.app"
   },
 ];
 
-// Generate projects
 export const generateProjects = (): Project[] => {
   return projectData.map((project, index) => ({
     id: index + 1,
@@ -127,5 +126,4 @@ export const generateProjects = (): Project[] => {
 };
 console.log(generateProjects())
 
-// Export the generated projects
 export const projects = generateProjects();

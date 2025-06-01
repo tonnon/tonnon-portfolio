@@ -15,7 +15,6 @@ export default function Video() {
 
   return (
     <div className="fixed top-[70px] left-0 w-full h-screen flex justify-center items-center z-[-1] overflow-hidden transform -translate-y-1/2">
-      {/* Loading indicator */}
       {!videoLoaded && progress > 0 && (
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="w-16 h-16 relative">
@@ -31,7 +30,6 @@ export default function Video() {
       )}
       
       <Suspense fallback={null}>
-        {/* Lazy load the actual video component */}
         <VideoContent isLoaded={videoLoaded} />
       </Suspense>
     </div>

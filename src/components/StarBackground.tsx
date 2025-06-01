@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 
 interface Star {
@@ -22,10 +21,9 @@ const StarBackground: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Generate stars
     const initStars = () => {
       const stars: Star[] = [];
-      const density = Math.floor((canvas.width * canvas.height) / 8000); // Adjust density based on screen size
+      const density = Math.floor((canvas.width * canvas.height) / 8000);
       
       for (let i = 0; i < density; i++) {
         stars.push({
@@ -33,33 +31,29 @@ const StarBackground: React.FC = () => {
           y: Math.random() * canvas.height,
           size: Math.random() * 1.8,
           opacity: Math.random() * 0.8 + 0.2,
-          speed: Math.random() * 0.03 + 0.005, // Slowed down
+          speed: Math.random() * 0.03 + 0.005,
           pulse: Math.random(),
-          pulseSpeed: Math.random() * 0.002 + 0.001 // Slowed down
+          pulseSpeed: Math.random() * 0.002 + 0.001
         });
       }
       
       starsRef.current = stars;
     };
 
-    // Set canvas dimensions to window size
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       
-      // Re-initialize stars after resize
       initStars();
     };
 
     window.addEventListener('resize', resize);
     resize();
 
-    // Draw stars
     const drawStars = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       starsRef.current.forEach(star => {
-        // Pulsate star - slower animation
         star.pulse += star.pulseSpeed;
         if (star.pulse > 1) star.pulse = 0;
         
@@ -67,7 +61,6 @@ const StarBackground: React.FC = () => {
         const currentSize = star.size * pulseFactor;
         const currentOpacity = star.opacity * pulseFactor;
         
-        // Create glow effect
         const gradient = ctx.createRadialGradient(
           star.x, star.y, 0,
           star.x, star.y, currentSize * 3
@@ -82,16 +75,13 @@ const StarBackground: React.FC = () => {
         ctx.arc(star.x, star.y, currentSize * 3, 0, Math.PI * 2);
         ctx.fill();
         
-        // Draw star center
         ctx.beginPath();
         ctx.arc(star.x, star.y, currentSize, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255, 255, 255, ${currentOpacity})`;
         ctx.fill();
         
-        // Slowly move stars
         star.y += star.speed;
         
-        // If star moves out of view, reset it to the top
         if (star.y > canvas.height) {
           star.y = 0;
           star.x = Math.random() * canvas.width;
@@ -99,7 +89,6 @@ const StarBackground: React.FC = () => {
       });
     };
 
-    // Animation loop
     let animationFrameId: number;
     const animate = () => {
       drawStars();
@@ -108,7 +97,6 @@ const StarBackground: React.FC = () => {
     
     animate();
 
-    // Cleanup
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener('resize', resize);

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { Github, Linkedin } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -15,16 +14,14 @@ const Navbar: React.FC<NavbarProps> = ({ activeFilter, setActiveFilter }) => {
     const logoInner = logoInnerRef.current;
     if (!logoInner) return;
     
-    // Create slower pulsating animation for the logo
     const animateLogo = () => {
-      const time = Date.now() * 0.0005; // Slowed down
+      const time = Date.now() * 0.0005;
       const pulse = Math.sin(time * 0.8) * 0.15 + 0.85;
       
-      // Apply dynamic box shadow for glow effect
       logoInner.style.boxShadow = `0 0 ${10 * pulse}px ${5 * pulse}px rgba(147, 112, 219, ${0.6 * pulse})`;
     };
     
-    const intervalId = setInterval(animateLogo, 16); // ~60fps
+    const intervalId = setInterval(animateLogo, 16);
     
     return () => {
       clearInterval(intervalId);
@@ -35,7 +32,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeFilter, setActiveFilter }) => {
     <header className="fixed top-0 left-0 w-full z-20">
       <div className="glass py-4 px-4 backdrop-blur-lg bg-black/30 border-t-0">
         <nav className="mw-full mx-auto flex items-center justify-between">
-          {/* Logo */}
           <div className="flex items-center">
             <div className="h-10 w-10 rounded-full bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center transition-all duration-700 animate-pulse-slow">
               <div 
@@ -45,7 +41,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeFilter, setActiveFilter }) => {
             </div>
           </div>
           
-          {/* Navigation Links */}
           <div className="flex items-center gap-2 px-1 py-1 rounded-full glass backdrop-blur-md bg-black/20">
             {[
               {id: 'Todos', label: 'All'}, 
@@ -67,7 +62,6 @@ const Navbar: React.FC<NavbarProps> = ({ activeFilter, setActiveFilter }) => {
             ))}
           </div>
           
-          {/* Social Links */}
           <div className="flex items-center gap-4">
             <a 
               href="https://github.com/tonnon" 

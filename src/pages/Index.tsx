@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import ProjectGrid from '@/components/ProjectGrid';
@@ -18,7 +17,6 @@ const Index: React.FC = () => {
     filter: activeFilter,
   });
 
-  // Allow animations after initial render
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsInitialLoad(false);
@@ -29,24 +27,19 @@ const Index: React.FC = () => {
 
   return (
     <div className="relative min-h-screen text-white">
-      {/* Background Elements */}
       <StarBackground />
       
-      {/* Navbar & Black Hole */}
       <Navbar 
         activeFilter={activeFilter} 
         setActiveFilter={setActiveFilter}
       />
       <Blackhole/>
       
-      {/* Main Content */}
       <main className="pt-40 pb-20 w-full mx-auto">
         <div className="space-y-10">
-          {/* Projects Section */}
           <section>
             <ProjectGrid projects={displayedProjects} />
             
-            {/* Load More Indicator */}
             {hasMore && (
               <div className="flex justify-center mt-12">
                 <div className="w-16 h-1 bg-purple-700/50 rounded-full animate-pulse-slow" />

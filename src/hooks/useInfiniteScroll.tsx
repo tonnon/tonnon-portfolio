@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useCallback } from 'react';
 import { Project } from '@/data/projects';
 
@@ -19,7 +18,6 @@ const useInfiniteScroll = ({
   const [filteredData, setFilteredData] = useState<Project[]>([]);
   const [displayedData, setDisplayedData] = useState<Project[]>([]);
 
-  // Filter data based on the filter type
   useEffect(() => {
     let result;
     if (filter === 'Websites') {
@@ -31,18 +29,15 @@ const useInfiniteScroll = ({
     }
     
     setFilteredData(result);
-    setCount(initialCount); // Reset count when filter changes
+    setCount(initialCount);
   }, [data, filter, initialCount]);
 
-  // Update displayed data based on count
   useEffect(() => {
     setDisplayedData(filteredData.slice(0, count));
   }, [filteredData, count]);
 
-  // Check if we're at the end of the data
   const hasMore = count < filteredData.length;
 
-  // Handle scroll
   const handleScroll = useCallback(() => {
     if (window.innerHeight + document.documentElement.scrollTop + 300 >= document.documentElement.offsetHeight) {
       if (hasMore) {
@@ -51,7 +46,6 @@ const useInfiniteScroll = ({
     }
   }, [hasMore, increment, filteredData.length]);
 
-  // Set up scroll event listener
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
