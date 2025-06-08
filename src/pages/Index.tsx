@@ -17,6 +17,12 @@ const Index: React.FC = () => {
     filter: activeFilter,
   });
 
+  const handleFilterChange = (newFilter: string) => {
+    if (newFilter !== activeFilter) {
+      setActiveFilter(newFilter);
+    }
+  };
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsInitialLoad(false);
@@ -31,25 +37,14 @@ const Index: React.FC = () => {
       
       <Navbar 
         activeFilter={activeFilter} 
-        setActiveFilter={setActiveFilter}
+        setActiveFilter={handleFilterChange}
       />
       <Blackhole/>
       
       <main className="pt-40 pb-20 w-full mx-auto">
         <div className="space-y-10">
-          <section>
+          <section className="transition-opacity duration-500">
             <ProjectGrid projects={displayedProjects} />
-            
-            {(hasMore || isLoading) && (
-              <div className="flex justify-center mt-12">
-                <div 
-                  className={`w-20 h-1 bg-purple-700/50 rounded-full ${isLoading ? 'animate-pulse' : 'animate-pulse-slow'}`} 
-                  style={{ 
-                    boxShadow: isLoading ? '0 0 8px 2px rgba(138, 43, 226, 0.5)' : 'none' 
-                  }}
-                />
-              </div>
-            )}
           </section>
         </div>
       </main>

@@ -12,7 +12,6 @@ import companionofthesevenspaceships from '../../../public/bgcards/companionofth
 import cyberpool from '../../../public/bgcards/cyberpool.webp'; */
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 /*  import cybersnake from '../../../public/bgcards/cybersnake.webp';
-import deadgods from '../../../public/bgcards/deadgods.gif';
 import deusesastronautas from '../../../public/bgcards/deusesastronautas.gif'; */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
@@ -49,6 +48,7 @@ import souzaadv from '../../../public/bgcards/souzaadv.webp';
 import splitmind from '../../../public/bgcards/splitmind.webp';  */
 import starsentry from '/src/assets/bgcards/starsentry.webp'; 
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
+import thedeadgods from '/src/assets/bgcards/the-dead-gods.webp'; 
 /*  import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
 import thewalkingdead from '../../../public/bgcards/thewalkingdead.gif';
 import thingsthatialwayswantedsaytoyou from '../../../public/bgcards/thingsthatialwayswantedsaytoyou.webp';
@@ -127,7 +127,14 @@ const projectData: Omit<Project, 'id'>[] = [
     imageUrl: theamazinglooperman,
     projectUrl: "https://the-amazing-looperman.vercel.app"
   },
-    {
+  {
+    name: "The Dead Gods",
+    type: 'website',
+    desc: "A satirical and surreal landing page for a fictional rock supergroup of resurrected legends — Jimi Hendrix, John Lennon, Kurt Cobain, Janis Joplin, Jeff Buckley, and Keith Moon.",
+    imageUrl: thedeadgods,
+    projectUrl: "https://the-dead-gods.vercel.app"
+  },
+  {
     name: "War of the Worlds",
     type: 'game',
     desc: "A retro-style interactive game, inspired by H.G. Wells classic science fiction novel.",

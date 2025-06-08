@@ -139,14 +139,6 @@ body {
   animation: fadeInScroll 0.8s ease-out forwards var(--delay, 0s);
 }
 
-.animate-float {
-  animation: float 8s ease-in-out infinite;
-}
-
-.animate-pulse-slow {
-  animation: pulse 4s ease-in-out infinite; /* Slowed down */
-}
-
 .animate-rotate {
   animation: rotate 40s linear infinite; /* Slowed down */
 }

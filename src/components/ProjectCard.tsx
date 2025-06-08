@@ -10,6 +10,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  
   const batchNumber = Math.floor(index / 8);
   const delayIndex = index % 8;
   const animationDelay = `${delayIndex * 0.1}s`;

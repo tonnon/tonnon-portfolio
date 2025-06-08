@@ -34,23 +34,25 @@ const useInfiniteScroll = ({
   }, [data, filter, initialCount]);
 
   useEffect(() => {
-    setDisplayedData(filteredData.slice(0, count));
+    if (filteredData.length > 0) {
+      setDisplayedData(filteredData.slice(0, count));
+    }
   }, [filteredData, count]);
 
   const hasMore = count < filteredData.length;
 
   const handleScroll = useCallback(() => {
     if (
-      !isLoading &&
-      window.innerHeight + document.documentElement.scrollTop + 500 >= document.documentElement.offsetHeight
+      !isLoading && 
+      hasMore &&
+      window.innerHeight + document.documentElement.scrollTop + 400 >= document.documentElement.offsetHeight
     ) {
-      if (hasMore) {
-        setIsLoading(true);
-        setTimeout(() => {
-          setCount(prevCount => Math.min(prevCount + increment, filteredData.length));
-          setIsLoading(false);
-        }, 300);
-      }
+      setIsLoading(true);
+      
+      setTimeout(() => {
+        setCount(prevCount => Math.min(prevCount + increment, filteredData.length));
+        setIsLoading(false);
+      }, 300);
     }
   }, [hasMore, increment, filteredData.length, isLoading]);
 
