@@ -10,8 +10,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
-
-  const animationDelay = `${(index % 6) * 0.1}s`;
+  const batchNumber = Math.floor(index / 8);
+  const delayIndex = index % 8;
+  const animationDelay = `${delayIndex * 0.1}s`;
+  const animationClass = batchNumber === 0 ? 'initial-card' : 'scroll-card';
 
   useEffect(() => {
     const img = new Image();
@@ -23,10 +25,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     <a href={project.projectUrl} target='__blank'>
       <div 
         ref={cardRef} 
-        className={`rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-[1.02] bg-black/30 relative`}
+        className={`rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-[1.02] bg-black/30 relative ${animationClass}`}
         style={{ 
-          opacity: 0, 
-          animation: `fadeIn 0.6s ease-out ${animationDelay} forwards`,
+          ['--delay' as string]: animationDelay,
           boxShadow: isHovered 
             ? '0 0 10px 3px rgba(138, 43, 226, 0.6), 0 0 15px 5px rgba(147, 112, 219, 0.3), inset 0 0 5px rgba(147, 112, 219, 0.2)'
             : 'none',

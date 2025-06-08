@@ -24,6 +24,7 @@ const VideoContent = ({ isLoaded }: VideoContentProps) => {
       loop
       playsInline
       preload="auto"
+      poster="/blackhole-poster.jpg"
       className={`w-full h-full object-cover opacity-0 transition-opacity duration-500 ${isLoaded ? 'opacity-40' : ''}`}
       style={{
         transform: 'scale(0.75) rotate(180deg)',

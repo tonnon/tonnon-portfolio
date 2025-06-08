@@ -7,7 +7,7 @@ import beingsofgreatconsciousnessandlove from '../../../public/bgcards/beings-of
 import brightstarinourencounter from '../../../public/bgcards/brightstarinourencounter.webp';
 import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp'; */
 import btocmec from '/src/assets/bgcards/btomec.webp';
-/* import calculadora from '../../../public/bgcards/calculadora.gif';
+/*
 import cardapio from '../../../public/bgcards/cardapio.gif';
 import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp';
 import cyberpool from '../../../public/bgcards/cyberpool.webp'; */
@@ -17,7 +17,7 @@ import deadgods from '../../../public/bgcards/deadgods.gif';
 import deusesastronautas from '../../../public/bgcards/deusesastronautas.gif'; */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
-/* import eventplataform from '../../../public/bgcards/eventplataform.webp';
+/*  import eventplataform from '../../../public/bgcards/eventplataform.webp';
 import everydayisaroughtime from '../../../public/bgcards/everydayisaroughtime.gif';
 import experimentaltruchettiles from '../../../public/bgcards/experimentaltruchettiles.webp';
 import feedbackwidget from '../../../public/bgcards/feedbackwidget.webp';
@@ -41,11 +41,12 @@ import netflix from '../../../public/bgcards/netflix.webp'
 import newdawn from '../../../public/bgcards/newdawn.webp';
 import particledefense from '../../../public/bgcards/particledefense.webp';
 import pinterest from '../../../public/bgcards/pinterest.webp';
-import powerofthepeople from '../../../public/bgcards/powerofthepeople.webp';
-import rickandmorty from '../../../public/bgcards/rickandmorty.gif';
+import powerofthepeople from '../../../public/bgcards/powerofthepeople.webp'; */
+import quantumcalc from '/src/assets/bgcards/quantum-calc.webp'; 
+/* import rickandmorty from '../../../public/bgcards/rickandmorty.gif';
 import soundtracker from '../../../public/bgcards/soundtracker.gif';
 import souzaadv from '../../../public/bgcards/souzaadv.webp';
-import splitmind from '../../../public/bgcards/splitmind.webp'; */
+import splitmind from '../../../public/bgcards/splitmind.webp';  */
 import starsentry from '/src/assets/bgcards/starsentry.webp'; 
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
 /* import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
@@ -99,6 +100,13 @@ const projectData: Omit<Project, 'id'>[] = [
     projectUrl: "https://tonnon.github.io/ecotech/"
   },
   {
+    name: "Quantum Calc",
+    type: 'website',
+    desc: 'Cyberpunk-themed scientific calculator. Designed for both functionality and futuristic aesthetics, it provides an intuitive interface for advanced mathematical operations in a sleek, neon-infused environment.',
+    imageUrl: quantumcalc,
+    projectUrl: "https://quantum-calc-five.vercel.app"
+  },
+  {
     name: "StarSentry",
     type: 'website',
     desc: 'A modern space traffic management system. This platform provides real-time tracking, collision predictions, and trajectory optimization for space objects.',
@@ -108,7 +116,7 @@ const projectData: Omit<Project, 'id'>[] = [
   {
     name: "The Amazing Looperman",
     type: 'game',
-    desc: "The Amazing Looperman is a fast-paced arcade game where your goal is simple: survive. Dodge incoming enemies, avoid collisions, and stay alive as long as you can in this endless challenge.",
+    desc: "Fast-paced arcade game where your goal is simple: survive. Dodge incoming enemies, avoid collisions, and stay alive as long as you can in this endless challenge.",
     imageUrl: theamazinglooperman,
     projectUrl: "https://the-amazing-looperman.vercel.app"
   },

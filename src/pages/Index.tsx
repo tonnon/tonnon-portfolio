@@ -10,10 +10,10 @@ const Index: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('Todos');
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   
-  const { displayedData: displayedProjects, hasMore } = useInfiniteScroll({
+  const { displayedData: displayedProjects, hasMore, isLoading } = useInfiniteScroll({
     data: projects,
-    initialCount: 6,
-    increment: 6,
+    initialCount: 8,
+    increment: 8,
     filter: activeFilter,
   });
 
@@ -40,9 +40,14 @@ const Index: React.FC = () => {
           <section>
             <ProjectGrid projects={displayedProjects} />
             
-            {hasMore && (
+            {(hasMore || isLoading) && (
               <div className="flex justify-center mt-12">
-                <div className="w-16 h-1 bg-purple-700/50 rounded-full animate-pulse-slow" />
+                <div 
+                  className={`w-20 h-1 bg-purple-700/50 rounded-full ${isLoading ? 'animate-pulse' : 'animate-pulse-slow'}`} 
+                  style={{ 
+                    boxShadow: isLoading ? '0 0 8px 2px rgba(138, 43, 226, 0.5)' : 'none' 
+                  }}
+                />
               </div>
             )}
           </section>
