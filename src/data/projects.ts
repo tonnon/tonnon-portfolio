@@ -8,7 +8,6 @@ import brightstarinourencounter from '../../../public/bgcards/brightstarinourenc
 import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp'; */
 import btocmec from '/src/assets/bgcards/btomec.webp';
 /*
-import cardapio from '../../../public/bgcards/cardapio.gif';
 import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp';
 import cyberpool from '../../../public/bgcards/cyberpool.webp'; */
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
@@ -17,7 +16,7 @@ import deadgods from '../../../public/bgcards/deadgods.gif';
 import deusesastronautas from '../../../public/bgcards/deusesastronautas.gif'; */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
-/*  import eventplataform from '../../../public/bgcards/eventplataform.webp';
+/*   import eventplataform from '../../../public/bgcards/eventplataform.webp';
 import everydayisaroughtime from '../../../public/bgcards/everydayisaroughtime.gif';
 import experimentaltruchettiles from '../../../public/bgcards/experimentaltruchettiles.webp';
 import feedbackwidget from '../../../public/bgcards/feedbackwidget.webp';
@@ -30,8 +29,9 @@ import halloween from '../../../public/bgcards/halloween.webp';
 import hanszimmer from '../../../public/bgcards/hanszimmer.gif';
 import happyhourclub from '../../../public/bgcards/happyhourclub.webp';
 import helptoner from '../../../public/bgcards/helptoner.gif';
-import hihowareyou from '../../../public/bgcards/hihowareyou.webp';
-import illuminati from '../../../public/bgcards/illuminati.gif';
+import hihowareyou from '../../../public/bgcards/hihowareyou.webp'; */
+import hikari from '/src/assets/bgcards/hikari.webp';
+/*  import illuminati from '../../../public/bgcards/illuminati.gif';
 import individualandcollectivetimeellipsis from '../../../public/bgcards/invidualandcollectivetimeellipsis.webp';
 import ledzeppelin from '../../../public/bgcards/ledzeppelin.gif';
 import letmeask from '../../../public/bgcards/letmeask.webp';
@@ -42,24 +42,24 @@ import newdawn from '../../../public/bgcards/newdawn.webp';
 import particledefense from '../../../public/bgcards/particledefense.webp';
 import pinterest from '../../../public/bgcards/pinterest.webp';
 import powerofthepeople from '../../../public/bgcards/powerofthepeople.webp'; */
-import quantumcalc from '/src/assets/bgcards/quantum-calc.webp'; 
+import quantumcalc from '/src/assets/bgcards/quantum-calc.webp';  
 /* import rickandmorty from '../../../public/bgcards/rickandmorty.gif';
 import soundtracker from '../../../public/bgcards/soundtracker.gif';
 import souzaadv from '../../../public/bgcards/souzaadv.webp';
 import splitmind from '../../../public/bgcards/splitmind.webp';  */
 import starsentry from '/src/assets/bgcards/starsentry.webp'; 
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
-/* import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
+/*  import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
 import thewalkingdead from '../../../public/bgcards/thewalkingdead.gif';
 import thingsthatialwayswantedsaytoyou from '../../../public/bgcards/thingsthatialwayswantedsaytoyou.webp';
 import twinsistersfromtheshinning from '../../../public/bgcards/twinsistersfromtheshinning.webp';
 import universallawoflove from '../../../public/bgcards/universal-law-of-love.webp';
 import vercel from '../../../public/bgcards/vercel.webp';
-import verificacaoemail from '../../../public/bgcards/verificacaoemail.gif';
-import waroftheworlds from '../../../public/bgcards/war-of-the-worlds.gif';
-import wavesofjoy from '../../../public/bgcards/wavesofjoy.webp';
+import verificacaoemail from '../../../public/bgcards/verificacaoemail.gif'; */
+import waroftheworlds from '/src/assets/bgcards/war-of-the-worlds.gif';
+/* import wavesofjoy from '../../../public/bgcards/wavesofjoy.webp';
 import youshinelikefireworksonthisemptytown from '../../../public/bgcards/youshinelikefireworksonthisemptytown.webp';
-import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp';  */
+import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp'; */
 
  export interface Project {
   id: number;
@@ -99,6 +99,13 @@ const projectData: Omit<Project, 'id'>[] = [
     imageUrl: ecotech,
     projectUrl: "https://tonnon.github.io/ecotech/"
   },
+    {
+    name: "Hikari",
+    type: 'website',
+    desc: 'Restaurante especializado na culinária japonesa contemporânea, oferecendo pratos de alta qualidade com apresentação refinada, em um ambiente sofisticado e acolhedor.',
+    imageUrl: hikari,
+    projectUrl: "https://hikari-wine.vercel.app"
+  },
   {
     name: "Quantum Calc",
     type: 'website',
@@ -119,6 +126,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: "Fast-paced arcade game where your goal is simple: survive. Dodge incoming enemies, avoid collisions, and stay alive as long as you can in this endless challenge.",
     imageUrl: theamazinglooperman,
     projectUrl: "https://the-amazing-looperman.vercel.app"
+  },
+    {
+    name: "War of the Worlds",
+    type: 'game',
+    desc: "A retro-style interactive game, inspired by H.G. Wells classic science fiction novel.",
+    imageUrl: waroftheworlds,
+    projectUrl: "https://tonnon.github.io/war-of-the-worlds/"
   },
 ];
 
