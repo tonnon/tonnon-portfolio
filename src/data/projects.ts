@@ -11,10 +11,10 @@ import btocmec from '/src/assets/bgcards/btomec.webp';
 import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp';
 import cyberpool from '../../../public/bgcards/cyberpool.webp'; */
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
-/*  import cybersnake from '../../../public/bgcards/cybersnake.webp';
-import deusesastronautas from '../../../public/bgcards/deusesastronautas.gif'; */
+/*  import cybersnake from '../../../public/bgcards/cybersnake.webp'; */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
+import eramosdeusesastronautas from '/src/assets/bgcards/eram-os-deuses-astronautas.webp';
 /*   import eventplataform from '../../../public/bgcards/eventplataform.webp';
 import everydayisaroughtime from '../../../public/bgcards/everydayisaroughtime.gif';
 import experimentaltruchettiles from '../../../public/bgcards/experimentaltruchettiles.webp';
@@ -99,7 +99,14 @@ const projectData: Omit<Project, 'id'>[] = [
     imageUrl: ecotech,
     projectUrl: "https://tonnon.github.io/ecotech/"
   },
-    {
+  {
+    name: "Eram os Deuses Astronautas?",
+    type: 'website',
+    desc: 'Um site interativo baseado no clássico livro "Eram os Deuses Astronautas?" (Chariots of the Gods?) de Erich von Däniken.',
+    imageUrl: eramosdeusesastronautas ,
+    projectUrl: "https://eram-os-deuses-astronautas-b8pu.vercel.app"
+  },
+  {
     name: "Hikari",
     type: 'website',
     desc: 'Restaurante especializado na culinária japonesa contemporânea, oferecendo pratos de alta qualidade com apresentação refinada, em um ambiente sofisticado e acolhedor.',
@@ -153,6 +160,5 @@ export const generateProjects = (): Project[] => {
     projectUrl: project.projectUrl
   }));
 };
-console.log(generateProjects())
 
 export const projects = generateProjects();

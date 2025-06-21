@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Project } from '../data/projects';
+import { useAnimation } from '../contexts/AnimationContext';
 
 interface ProjectCardProps {
   project: Project;
@@ -9,12 +10,29 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
+  const { markAsAnimated, hasBeenAnimated } = useAnimation();
   
-  const batchNumber = Math.floor(index / 8);
   const delayIndex = index % 8;
-  const animationDelay = `${delayIndex * 0.1}s`;
-  const animationClass = batchNumber === 0 ? 'initial-card' : 'scroll-card';
+  const animationDelay = delayIndex * 100; // milliseconds
+  
+  // Check if this project has already been animated
+  const alreadyAnimated = hasBeenAnimated(project.id);
+
+  useEffect(() => {
+    if (!alreadyAnimated) {
+      // Apply staggered animation delay
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+        markAsAnimated(project.id);
+      }, animationDelay + 200); // Extra delay for smoother start
+      
+      return () => clearTimeout(timer);
+    } else {
+      setIsVisible(true);
+    }
+  }, [project.id, alreadyAnimated, animationDelay, markAsAnimated]);
 
   useEffect(() => {
     const img = new Image();
@@ -26,13 +44,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     <a href={project.projectUrl} target='__blank'>
       <div 
         ref={cardRef} 
-        className={`rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-[1.02] bg-black/30 relative ${animationClass}`}
+        className={`rounded-lg overflow-hidden transform transition-all duration-500 hover:scale-[1.02] bg-black/30 relative ${
+          isVisible ? 'card-visible' : 'card-hidden'
+        }`}
         style={{ 
-          ['--delay' as string]: animationDelay,
+          transitionDelay: alreadyAnimated ? '0ms' : `${animationDelay}ms`,
           boxShadow: isHovered 
             ? '0 0 10px 3px rgba(138, 43, 226, 0.6), 0 0 15px 5px rgba(147, 112, 219, 0.3), inset 0 0 5px rgba(147, 112, 219, 0.2)'
             : 'none',
-          transition: 'box-shadow 0.4s ease-in, transform 0.3s ease-in-out'
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
