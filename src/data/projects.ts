@@ -24,11 +24,11 @@ import flapmorty from '../../../public/bgcards/flapmorty.webp';
 import formtemplate from '../../../public/bgcards/formtemplate.gif';
 import golenflameemanatingfromtheinnerlight from '../../../public/bgcards/golenflameemanatingfromtheinnerlight.webp';
 import google from '../../../public/bgcards/google.webp';
-import halloween from '../../../public/bgcards/halloween.webp';
-import hanszimmer from '../../../public/bgcards/hanszimmer.gif';
+import halloween from '../../../public/bgcards/halloween.webp';;
 import happyhourclub from '../../../public/bgcards/happyhourclub.webp';
 import helptoner from '../../../public/bgcards/helptoner.gif';
 import hihowareyou from '../../../public/bgcards/hihowareyou.webp'; */
+import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
 import hikari from '/src/assets/bgcards/hikari.webp';
 /*  import illuminati from '../../../public/bgcards/illuminati.gif';
 import individualandcollectivetimeellipsis from '../../../public/bgcards/invidualandcollectivetimeellipsis.webp';
@@ -105,6 +105,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'Um site interativo baseado no clássico livro "Eram os Deuses Astronautas?" (Chariots of the Gods?) de Erich von Däniken.',
     imageUrl: eramosdeusesastronautas ,
     projectUrl: "https://eram-os-deuses-astronautas-b8pu.vercel.app"
+  },
+    {
+    name: "Hans Zimmer",
+    type: 'website',
+    desc: 'A modern, responsive, and cinematic landing page dedicated to Hans Zimmer — one of the most iconic film composers of all time.',
+    imageUrl: hanszimmer,
+    projectUrl: "https://hans-zimmer-orpin.vercel.app"
   },
   {
     name: "Hikari",
