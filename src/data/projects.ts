@@ -25,9 +25,9 @@ import formtemplate from '../../../public/bgcards/formtemplate.gif';
 import golenflameemanatingfromtheinnerlight from '../../../public/bgcards/golenflameemanatingfromtheinnerlight.webp';
 import google from '../../../public/bgcards/google.webp';
 import halloween from '../../../public/bgcards/halloween.webp';;
-import happyhourclub from '../../../public/bgcards/happyhourclub.webp';
 import helptoner from '../../../public/bgcards/helptoner.gif';
 import hihowareyou from '../../../public/bgcards/hihowareyou.webp'; */
+import happyhourclub from '/src/assets/bgcards/happyhourclub.webp';
 import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
 import hikari from '/src/assets/bgcards/hikari.webp';
 /*  import illuminati from '../../../public/bgcards/illuminati.gif';
@@ -107,6 +107,13 @@ const projectData: Omit<Project, 'id'>[] = [
     projectUrl: "https://eram-os-deuses-astronautas-b8pu.vercel.app"
   },
     {
+    name: "Happy Hour Club",
+    type: 'website',
+    desc: 'Landing page for a mystery box subscription service. Users can choose between craft beer or wine, and each box is themed around geek or pop culture — including movies, video games, comics, and anime.',
+    imageUrl: happyhourclub,
+    projectUrl: "https://happy-hour-club.vercel.app"
+  },
+  {
     name: "Hans Zimmer",
     type: 'website',
     desc: 'A modern, responsive, and cinematic landing page dedicated to Hans Zimmer — one of the most iconic film composers of all time.',
