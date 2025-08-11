@@ -14,7 +14,6 @@ import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 /*  import cybersnake from '../../../public/bgcards/cybersnake.webp'; */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
-import eramosdeusesastronautas from '/src/assets/bgcards/eram-os-deuses-astronautas.webp';
 /*   import eventplataform from '../../../public/bgcards/eventplataform.webp';
 import everydayisaroughtime from '../../../public/bgcards/everydayisaroughtime.gif';
 import experimentaltruchettiles from '../../../public/bgcards/experimentaltruchettiles.webp';
@@ -100,13 +99,6 @@ const projectData: Omit<Project, 'id'>[] = [
     projectUrl: "https://tonnon.github.io/ecotech/"
   },
   {
-    name: "Eram os Deuses Astronautas?",
-    type: 'website',
-    desc: 'Um site interativo baseado no clássico livro "Eram os Deuses Astronautas?" (Chariots of the Gods?) de Erich von Däniken.',
-    imageUrl: eramosdeusesastronautas ,
-    projectUrl: "https://eram-os-deuses-astronautas-b8pu.vercel.app"
-  },
-    {
     name: "Happy Hour Club",
     type: 'website',
     desc: 'Landing page for a mystery box subscription service. Users can choose between craft beer or wine, and each box is themed around geek or pop culture — including movies, video games, comics, and anime.',
