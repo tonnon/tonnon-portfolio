@@ -26,7 +26,6 @@ import google from '../../../public/bgcards/google.webp';
 import halloween from '../../../public/bgcards/halloween.webp';;
 import helptoner from '../../../public/bgcards/helptoner.gif';
 import hihowareyou from '../../../public/bgcards/hihowareyou.webp'; */
-import happyhourclub from '/src/assets/bgcards/happyhourclub.webp';
 import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
 import hikari from '/src/assets/bgcards/hikari.webp';
 /*  import illuminati from '../../../public/bgcards/illuminati.gif';
@@ -97,13 +96,6 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'Este projeto explora os impactos ambientais e sociais do lixo eletrônico no mundo moderno.',
     imageUrl: ecotech,
     projectUrl: "https://tonnon.github.io/ecotech/"
-  },
-  {
-    name: "Happy Hour Club",
-    type: 'website',
-    desc: 'Landing page for a mystery box subscription service. Users can choose between craft beer or wine, and each box is themed around geek or pop culture — including movies, video games, comics, and anime.',
-    imageUrl: happyhourclub,
-    projectUrl: "https://happy-hour-club.vercel.app"
   },
   {
     name: "Hans Zimmer",
