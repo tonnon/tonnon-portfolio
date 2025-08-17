@@ -28,8 +28,8 @@ import helptoner from '../../../public/bgcards/helptoner.gif';
 import hihowareyou from '../../../public/bgcards/hihowareyou.webp'; */
 import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
 import hikari from '/src/assets/bgcards/hikari.webp';
-/*  import illuminati from '../../../public/bgcards/illuminati.gif';
-import individualandcollectivetimeellipsis from '../../../public/bgcards/invidualandcollectivetimeellipsis.webp';
+import inwo from '/src/assets/bgcards/illuminati.gif';
+/*  import individualandcollectivetimeellipsis from '../../../public/bgcards/invidualandcollectivetimeellipsis.webp';
 import ledzeppelin from '../../../public/bgcards/ledzeppelin.gif';
 import letmeask from '../../../public/bgcards/letmeask.webp';
 import lovelynight from '../../../public/bgcards/lovelynight.webp';
@@ -110,6 +110,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'Restaurante especializado na culinária japonesa contemporânea, oferecendo pratos de alta qualidade com apresentação refinada, em um ambiente sofisticado e acolhedor.',
     imageUrl: hikari,
     projectUrl: "https://hikari-wine.vercel.app"
+  },
+  {
+    name: "Illuminati: New World Order Online",
+    type: 'game',
+    desc: 'Digital reimagining of the cult classic conspiracy card game. Take control of secret societies, manipulate world events, and outwit your rivals in a battle for global domination. Every card is a plot, every move a step deeper into the shadows.',
+    imageUrl: inwo,
+    projectUrl: "https://illuminati-new-world-order-online.vercel.app"
   },
   {
     name: "Quantum Calc",
