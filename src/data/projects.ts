@@ -109,7 +109,7 @@ const projectData: Omit<Project, 'id'>[] = [
     type: 'game',
     desc: 'Digital reimagining of the cult classic conspiracy card game. Take control of secret societies, manipulate world events, and outwit your rivals in a battle for global domination. Every card is a plot, every move a step deeper into the shadows.',
     imageUrl: inwo,
-    projectUrl: "https://illuminati-new-world-order-online.vercel.app"
+    projectUrl: "https://inwo.vercel.app"
   },
   {
     name: "Quantum Calc",
