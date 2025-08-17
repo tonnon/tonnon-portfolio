@@ -27,7 +27,7 @@ import halloween from '../../../public/bgcards/halloween.webp';;
 import helptoner from '../../../public/bgcards/helptoner.gif';
 import hihowareyou from '../../../public/bgcards/hihowareyou.webp'; */
 import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
-import hikari from '/src/assets/bgcards/hikari.webp';
+/* import hikari from '/src/assets/bgcards/hikari.webp'; */
 import inwo from '/src/assets/bgcards/illuminati.gif';
 /*  import individualandcollectivetimeellipsis from '../../../public/bgcards/invidualandcollectivetimeellipsis.webp';
 import ledzeppelin from '../../../public/bgcards/ledzeppelin.gif';
@@ -103,13 +103,6 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'A modern, responsive, and cinematic landing page dedicated to Hans Zimmer — one of the most iconic film composers of all time.',
     imageUrl: hanszimmer,
     projectUrl: "https://hans-zimmer-orpin.vercel.app"
-  },
-  {
-    name: "Hikari",
-    type: 'website',
-    desc: 'Restaurante especializado na culinária japonesa contemporânea, oferecendo pratos de alta qualidade com apresentação refinada, em um ambiente sofisticado e acolhedor.',
-    imageUrl: hikari,
-    projectUrl: "https://hikari-wine.vercel.app"
   },
   {
     name: "Illuminati: New World Order Online",
