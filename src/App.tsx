@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import VideoPreloader from "./components/VideoPreloader";
 import { usePerformanceMonitor } from "./hooks/usePerformanceMonitor";
+import { Analytics } from "@vercel/analytics/react";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <Analytics />
           </BrowserRouter>
         </AnimationProvider>
       </TooltipProvider>
