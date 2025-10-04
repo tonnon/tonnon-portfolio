@@ -15,4 +15,24 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    // Otimizações de build
+    target: 'esnext',
+    minify: 'esbuild',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+        },
+      },
+    },
+    // Otimização de assets
+    assetsInlineLimit: 4096, // Inline assets < 4kb
+    chunkSizeWarningLimit: 1000,
+  },
+  // Otimizações de desenvolvimento
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
+  },
 }));

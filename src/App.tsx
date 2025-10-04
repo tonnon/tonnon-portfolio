@@ -7,25 +7,31 @@ import { AnimationProvider } from "./contexts/AnimationContext";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import VideoPreloader from "./components/VideoPreloader";
+import { usePerformanceMonitor } from "./hooks/usePerformanceMonitor";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <AnimationProvider>
-        <VideoPreloader />
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </AnimationProvider>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  // Monitorar performance em desenvolvimento
+  usePerformanceMonitor();
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <AnimationProvider>
+          <VideoPreloader />
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </AnimationProvider>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

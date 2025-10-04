@@ -49,16 +49,29 @@ const useInfiniteScroll = ({
     ) {
       setIsLoading(true);
       
-      setTimeout(() => {
+      // Use requestAnimationFrame for better performance
+      requestAnimationFrame(() => {
         setCount(prevCount => Math.min(prevCount + increment, filteredData.length));
         setIsLoading(false);
-      }, 300);
+      });
     }
   }, [hasMore, increment, filteredData.length, isLoading]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    let ticking = false;
+    
+    const throttledHandleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', throttledHandleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', throttledHandleScroll);
   }, [handleScroll]);
 
   return { displayedData, hasMore, isLoading };

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Project } from '../data/projects';
 import { useAnimation } from '../contexts/AnimationContext';
+import OptimizedImage from './OptimizedImage';
 
 interface ProjectCardProps {
   project: Project;
@@ -8,7 +9,6 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
-  const [imageLoaded, setImageLoaded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -34,11 +34,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     }
   }, [project.id, alreadyAnimated, animationDelay, markAsAnimated]);
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = project.imageUrl;
-    img.onload = () => setImageLoaded(true);
-  }, [project.imageUrl]);
 
   return (
     <a href={project.projectUrl} target='__blank'>
@@ -68,17 +63,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         />
         
         <div className="relative aspect-video overflow-hidden">
-          <div 
-            className={`absolute inset-0 bg-purple-900/30 backdrop-blur-md transition-opacity duration-500 ${imageLoaded ? 'opacity-0' : 'opacity-100'}`}
-          />
-          
-          <img 
+          <OptimizedImage
             src={project.imageUrl}
             alt={project.name}
-            className={`w-full h-full object-cover transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
-            loading="lazy"
+            className="w-full h-full"
           />
-          
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
         </div>
         
