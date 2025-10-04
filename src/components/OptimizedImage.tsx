@@ -4,7 +4,6 @@ interface OptimizedImageProps {
   src: string;
   alt: string;
   className?: string;
-  placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
 }
