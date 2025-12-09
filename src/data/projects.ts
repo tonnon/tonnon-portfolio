@@ -7,11 +7,12 @@ import beingsofgreatconsciousnessandlove from '../../../public/bgcards/beings-of
 import brightstarinourencounter from '../../../public/bgcards/brightstarinourencounter.webp';
 import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp'; */
 import btocmec from '/src/assets/bgcards/btomec.webp';
-/*
-import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp';
-import cyberpool from '../../../public/bgcards/cyberpool.webp'; */
+
+/* import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp'; */
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
-/*  import cybersnake from '../../../public/bgcards/cybersnake.webp'; */
+/* import cyberpool from '../../../public/bgcards/cyberpool.webp';  */
+import crewcipher from '/src/assets/bgcards/crew-cipher.svg';
+/*  import cybersnake from '../../../public/bgcards/cybersnake.webp';  */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
 /*   import eventplataform from '../../../public/bgcards/eventplataform.webp';
@@ -75,6 +76,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'Empresa especializada na fabricação de moldes de alta precisão para os setores de cosméticos, farmacêutico, higiene e alimentício.',
     imageUrl: btocmec,
     projectUrl: "https://btomec.vercel.app"
+  },
+    {
+    name: "Crew Cipher",
+    type: 'game',
+    desc: 'Aplicação web interativa desenvolvida em Flask que simula um sistema de controle de acesso de uma nave espacial. O sistema utiliza criptografia Fernet, geração de QR codes e uma interface drag-and-drop para validar credenciais de tripulantes.',
+    imageUrl: crewcipher,
+    projectUrl: "https://crew-cipher.vercel.app"
   },
   {
     name: "Cybertetromino",
