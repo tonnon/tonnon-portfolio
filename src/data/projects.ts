@@ -30,6 +30,7 @@ import hihowareyou from '../../../public/bgcards/hihowareyou.webp'; */
 import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
 /* import hikari from '/src/assets/bgcards/hikari.webp'; */
 import inwo from '/src/assets/bgcards/illuminati.gif';
+import imageaipro from '/src/assets/bgcards/image-ai-pro.webp';
 /*  import individualandcollectivetimeellipsis from '../../../public/bgcards/invidualandcollectivetimeellipsis.webp';
 import ledzeppelin from '../../../public/bgcards/ledzeppelin.gif';
 import letmeask from '../../../public/bgcards/letmeask.webp';
@@ -40,14 +41,14 @@ import newdawn from '../../../public/bgcards/newdawn.webp';
 import particledefense from '../../../public/bgcards/particledefense.webp';
 import pinterest from '../../../public/bgcards/pinterest.webp';
 import powerofthepeople from '../../../public/bgcards/powerofthepeople.webp'; */
-import quantumcalc from '/src/assets/bgcards/quantum-calc.webp';  
+import quantumcalc from '/src/assets/bgcards/quantum-calc.webp';
 /* import rickandmorty from '../../../public/bgcards/rickandmorty.gif';
 import soundtracker from '../../../public/bgcards/soundtracker.gif';
 import souzaadv from '../../../public/bgcards/souzaadv.webp';
 import splitmind from '../../../public/bgcards/splitmind.webp';  */
-import starsentry from '/src/assets/bgcards/starsentry.webp'; 
+import starsentry from '/src/assets/bgcards/starsentry.webp';
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
-import thedeadgods from '/src/assets/bgcards/the-dead-gods.webp'; 
+import thedeadgods from '/src/assets/bgcards/the-dead-gods.webp';
 /*  import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
 import thewalkingdead from '../../../public/bgcards/thewalkingdead.gif';
 import thingsthatialwayswantedsaytoyou from '../../../public/bgcards/thingsthatialwayswantedsaytoyou.webp';
@@ -60,14 +61,14 @@ import waroftheworlds from '/src/assets/bgcards/war-of-the-worlds.gif';
 import youshinelikefireworksonthisemptytown from '../../../public/bgcards/youshinelikefireworksonthisemptytown.webp';
 import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp'; */
 
- export interface Project {
+export interface Project {
   id: number;
   name: string;
   desc: string;
   type: 'website' | 'game';
   imageUrl: string;
   projectUrl: string;
-} 
+}
 
 const projectData: Omit<Project, 'id'>[] = [
   {
@@ -77,7 +78,7 @@ const projectData: Omit<Project, 'id'>[] = [
     imageUrl: btocmec,
     projectUrl: "https://btomec.vercel.app"
   },
-    {
+  {
     name: "Crew Cipher",
     type: 'game',
     desc: 'Aplicação web interativa desenvolvida em Flask que simula um sistema de controle de acesso de uma nave espacial. O sistema utiliza criptografia Fernet, geração de QR codes e uma interface drag-and-drop para validar credenciais de tripulantes.',
@@ -118,6 +119,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'Digital reimagining of the cult classic conspiracy card game. Take control of secret societies, manipulate world events, and outwit your rivals in a battle for global domination. Every card is a plot, every move a step deeper into the shadows.',
     imageUrl: inwo,
     projectUrl: "https://inwo.vercel.app"
+  },
+  {
+    name: "ImageAI Pro",
+    type: 'website',
+    desc: 'Uma plataforma web para processamento de imagens em lote, focada na remoção de fundos e melhoria de qualidade. Todo o processamento é realizado localmente no navegador do usuário, garantindo privacidade e velocidade.',
+    imageUrl: imageaipro,
+    projectUrl: "https://image-ai-pro.vercel.app"
   },
   {
     name: "Quantum Calc",
