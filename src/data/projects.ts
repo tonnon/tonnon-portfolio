@@ -7,7 +7,6 @@ import beingsofgreatconsciousnessandlove from '../../../public/bgcards/beings-of
 import brightstarinourencounter from '../../../public/bgcards/brightstarinourencounter.webp';
 import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp'; */
 import btocmec from '/src/assets/bgcards/btomec.webp';
-
 /* import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp'; */
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 /* import cyberpool from '../../../public/bgcards/cyberpool.webp';  */
@@ -47,6 +46,7 @@ import soundtracker from '../../../public/bgcards/soundtracker.gif';
 import souzaadv from '../../../public/bgcards/souzaadv.webp';
 import splitmind from '../../../public/bgcards/splitmind.webp';  */
 import starsentry from '/src/assets/bgcards/starsentry.webp';
+import taskquest from '/src/assets/bgcards/taskquest.png';
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
 import thedeadgods from '/src/assets/bgcards/the-dead-gods.webp';
 /*  import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
@@ -81,7 +81,7 @@ const projectData: Omit<Project, 'id'>[] = [
   {
     name: "Crew Cipher",
     type: 'game',
-    desc: 'Aplicação web interativa desenvolvida em Flask que simula um sistema de controle de acesso de uma nave espacial. O sistema utiliza criptografia Fernet, geração de QR codes e uma interface drag-and-drop para validar credenciais de tripulantes.',
+    desc: 'Aplicação web interativa desenvolvida em Flask que simula um sistema de controle de acesso de um navio. O sistema utiliza criptografia Fernet, geração de QR codes e uma interface drag-and-drop para validar credenciais de tripulantes.',
     imageUrl: crewcipher,
     projectUrl: "https://crew-cipher.vercel.app"
   },
@@ -140,6 +140,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'A modern space traffic management system. This platform provides real-time tracking, collision predictions, and trajectory optimization for space objects.',
     imageUrl: starsentry,
     projectUrl: "https://starsentry.vercel.app"
+  },
+    {
+    name: "Taskquest",
+    type: 'website',
+    desc: 'Aplicação de produtividade gamificada que transforma o gerenciamento das suas tarefas em uma experiência RPG com checklist aninhado, hábitos diários e progressão de XP.',
+    imageUrl: taskquest,
+    projectUrl: "https://taskquestbr.vercel.app"
   },
   {
     name: "The Amazing Looperman",

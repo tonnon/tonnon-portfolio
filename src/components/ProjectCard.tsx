@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     <a href={project.projectUrl} target='__blank'>
       <div 
         ref={cardRef} 
-        className={`rounded-lg overflow-hidden transform transition-all duration-500 hover:scale-[1.02] bg-black/30 relative ${
+        className={`rounded-lg overflow-hidden transition-all duration-500 bg-black/30 relative ${
           isVisible ? 'card-visible' : 'card-hidden'
         }`}
         style={{ 
