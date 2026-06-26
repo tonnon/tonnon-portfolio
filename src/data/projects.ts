@@ -2,15 +2,16 @@
 import adidas from '/src/assets/bgcards/adidas.gif';
 import afilosfiadaviagemdotempo from '../../../public/bgcards/a-filosofia-da-viagem-no-tempo.gif';
 import alongnight from '../../../public/bgcards/alongnight.gif';
-import amongus from '../../../public/bgcards/amongus.webp';
-import beingsofgreatconsciousnessandlove from '../../../public/bgcards/beings-of-great-consciousness-and-love.webp';
-import brightstarinourencounter from '../../../public/bgcards/brightstarinourencounter.webp';
-import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp'; */
+import amongus from '../../../public/bgcards/amongus.webp'; */
+import beckoned from '/src/assets/bgcards/beckoned.webp';
 import btocmec from '/src/assets/bgcards/btomec.webp';
+/* import beingsofgreatconsciousnessandlove from '../../../public/bgcards/beings-of-great-consciousness-and-love.webp';
+import brightstarinourencounter from '../../../public/bgcards/brightstarinourencounter.webp';
+import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp'; 
 /* import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp'; */
-import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 /* import cyberpool from '../../../public/bgcards/cyberpool.webp';  */
 import crewcipher from '/src/assets/bgcards/crew-cipher.svg';
+import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 /*  import cybersnake from '../../../public/bgcards/cybersnake.webp';  */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
@@ -46,7 +47,7 @@ import soundtracker from '../../../public/bgcards/soundtracker.gif';
 import souzaadv from '../../../public/bgcards/souzaadv.webp';
 import splitmind from '../../../public/bgcards/splitmind.webp';  */
 import starsentry from '/src/assets/bgcards/starsentry.webp';
-import taskquest from '/src/assets/bgcards/taskquest.png';
+import taskquest from '/src/assets/bgcards/taskquest.webp';
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
 import thedeadgods from '/src/assets/bgcards/the-dead-gods.webp';
 /*  import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
@@ -71,6 +72,13 @@ export interface Project {
 }
 
 const projectData: Omit<Project, 'id'>[] = [
+    {
+    name: "Beckoned",
+    type: 'website',
+    desc: 'Beckoned is a first-person psychological horror game inspired by PT and Silent Hil.',
+    imageUrl: beckoned,
+    projectUrl: "https://beckoned.vercel.app/"
+  },
   {
     name: "BTOMEC",
     type: 'website',

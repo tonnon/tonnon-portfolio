@@ -18,17 +18,13 @@ export default function Video() {
   }, [isLoaded]);
 
   return (
-    <div className="fixed top-[70px] left-0 w-full h-screen flex justify-center items-center z-[-1] overflow-hidden transform -translate-y-1/2">
+    <div className="fixed top-[70px] left-0 w-full h-[100dvh] flex justify-center items-center z-[-1] overflow-hidden transform -translate-y-1/2">
       <Suspense fallback={
         <div className="w-full h-full">
           <img
             src="/blackhole-poster.jpg"
             alt="Blackhole loading"
-            className="w-full h-full object-cover opacity-40"
-            style={{
-              transform: 'scale(0.75) rotate(180deg)',
-              objectFit: 'cover',
-            }}
+            className="w-full h-full object-cover opacity-40 rotate-180 scale-[1.1] md:scale-[0.75]"
           />
         </div>
       }>

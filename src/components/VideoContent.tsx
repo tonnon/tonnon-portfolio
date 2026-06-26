@@ -32,32 +32,22 @@ const VideoContent = ({ isLoaded }: VideoContentProps) => {
       <img
         src="/blackhole-poster.jpg"
         alt="Blackhole preview"
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 rotate-180 scale-[1.1] md:scale-[0.75] will-change-transform ${
           isLoaded && videoCanPlay ? 'opacity-0' : 'opacity-40'
         }`}
-        style={{
-          transform: 'scale(0.75) rotate(180deg)',
-          objectFit: 'cover',
-          willChange: 'transform',
-        }}
       />
-      
+
       {/* Video Element */}
-      <video 
+      <video
         ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 rotate-180 scale-[1.1] md:scale-[0.75] will-change-transform ${
           isLoaded && videoCanPlay ? 'opacity-40' : 'opacity-0'
         }`}
-        style={{
-          transform: 'scale(0.75) rotate(180deg)',
-          objectFit: 'cover',
-          willChange: 'transform',
-        }}
       >
         <source 
           src="/blackhole.mp4" 
