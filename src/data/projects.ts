@@ -31,6 +31,7 @@ import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
 /* import hikari from '/src/assets/bgcards/hikari.webp'; */
 import inwo from '/src/assets/bgcards/illuminati.gif';
 import imageaipro from '/src/assets/bgcards/image-ai-pro.webp';
+import individua from '/src/assets/bgcards/individua.webp';
 /*  import individualandcollectivetimeellipsis from '../../../public/bgcards/invidualandcollectivetimeellipsis.webp';
 import ledzeppelin from '../../../public/bgcards/ledzeppelin.gif';
 import letmeask from '../../../public/bgcards/letmeask.webp';
@@ -47,7 +48,6 @@ import soundtracker from '../../../public/bgcards/soundtracker.gif';
 import souzaadv from '../../../public/bgcards/souzaadv.webp';
 import splitmind from '../../../public/bgcards/splitmind.webp';  */
 import starsentry from '/src/assets/bgcards/starsentry.webp';
-import taskquest from '/src/assets/bgcards/taskquest.webp';
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
 import thedeadgods from '/src/assets/bgcards/the-dead-gods.webp';
 /*  import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
@@ -135,6 +135,13 @@ const projectData: Omit<Project, 'id'>[] = [
     imageUrl: imageaipro,
     projectUrl: "https://image-ai-pro.vercel.app"
   },
+    {
+    name: "Individua",
+    type: 'website',
+    desc: 'Um sistema de vida gamificado: cada missão concluída (manual ou importada do Trello) vira XP, sobe seus atributos (virtudes), sobe seu rank e enche seu cofre de moedas — trocáveis por recompensas que você mesmo define na Loja do Tempo.',
+    imageUrl: individua,
+    projectUrl: "https://individua.vercel.app/login"
+  },
   {
     name: "Quantum Calc",
     type: 'website',
@@ -148,13 +155,6 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'A modern space traffic management system. This platform provides real-time tracking, collision predictions, and trajectory optimization for space objects.',
     imageUrl: starsentry,
     projectUrl: "https://starsentry.vercel.app"
-  },
-    {
-    name: "Taskquest",
-    type: 'website',
-    desc: 'Aplicação de produtividade gamificada que transforma o gerenciamento das suas tarefas em uma experiência RPG com checklist aninhado, hábitos diários e progressão de XP.',
-    imageUrl: taskquest,
-    projectUrl: "https://taskquestbr.vercel.app"
   },
   {
     name: "The Amazing Looperman",
