@@ -116,7 +116,7 @@ const projectData: Omit<Project, 'id'>[] = [
     {
     name: "Soundtracker",
     type: 'website',
-    desc: 'A real-news curation of soundtracks for film, TV and games. Headlines, images and links aggregated live from the GDELT Project, a free, keyless global news.',
+    desc: 'A real-news curation of soundtracks for film, TV and games — headlines, images, summaries and links aggregated live from the GNews API.',
     imageUrl: soundtracker,
     projectUrl: "https://soundtrackernews.vercel.app"
   },
