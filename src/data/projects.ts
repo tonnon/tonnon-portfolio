@@ -1,8 +1,9 @@
 /* import spaceoddysey from '/src/assets/bgcards/2001-space-oddysey.gif';
 import amongus from '../../../public/bgcards/amongus.webp'; */
 import beckoned from '/src/assets/bgcards/beckoned.webp';
+import brokenglassshapedofaheart from '/src/assets/bgcards/brokenglassshapedofaheart.webp'; 
 import btocmec from '/src/assets/bgcards/btomec.webp';
-/* import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp'; 
+/* 
 /* import cyberpool from '../../../public/bgcards/cyberpool.webp';  */
 import crewcipher from '/src/assets/bgcards/crew-cipher.svg';
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
@@ -36,12 +37,19 @@ export interface Project {
 }
 
 const projectData: Omit<Project, 'id'>[] = [
-    {
+  {
     name: "Beckoned",
     type: 'website',
     desc: 'Beckoned is a first-person psychological horror game inspired by PT and Silent Hil.',
     imageUrl: beckoned,
     projectUrl: "https://beckoned.vercel.app/"
+  },
+  {
+    name: "Broken Glass Shaped of a Heart",
+    type: 'website',
+    desc: 'An interactive SVG animation of a heart made of shattered glass shards. Click anywhere to watch the pieces explode outward into chaos — click again to watch them reassemble into a heart, right before your eyes.',
+    imageUrl: brokenglassshapedofaheart,
+    projectUrl: "https://broken-glass-shaped-of-a-heart.vercel.app/"
   },
   {
     name: "BTOMEC",
