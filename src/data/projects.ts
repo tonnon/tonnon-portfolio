@@ -1,66 +1,30 @@
 /* import spaceoddysey from '/src/assets/bgcards/2001-space-oddysey.gif';
-import adidas from '/src/assets/bgcards/adidas.gif';
-import afilosfiadaviagemdotempo from '../../../public/bgcards/a-filosofia-da-viagem-no-tempo.gif';
-import alongnight from '../../../public/bgcards/alongnight.gif';
 import amongus from '../../../public/bgcards/amongus.webp'; */
 import beckoned from '/src/assets/bgcards/beckoned.webp';
 import btocmec from '/src/assets/bgcards/btomec.webp';
-/* import beingsofgreatconsciousnessandlove from '../../../public/bgcards/beings-of-great-consciousness-and-love.webp';
-import brightstarinourencounter from '../../../public/bgcards/brightstarinourencounter.webp';
-import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp'; 
-/* import companionofthesevenspaceships from '../../../public/bgcards/companionofthesevenspaceships.webp'; */
+/* import brokenglassshapedofaheart from '../../../public/bgcards/brokenglassshapedofaheart.webp'; 
 /* import cyberpool from '../../../public/bgcards/cyberpool.webp';  */
 import crewcipher from '/src/assets/bgcards/crew-cipher.svg';
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 /*  import cybersnake from '../../../public/bgcards/cybersnake.webp';  */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
-/*   import eventplataform from '../../../public/bgcards/eventplataform.webp';
-import everydayisaroughtime from '../../../public/bgcards/everydayisaroughtime.gif';
-import experimentaltruchettiles from '../../../public/bgcards/experimentaltruchettiles.webp';
-import feedbackwidget from '../../../public/bgcards/feedbackwidget.webp';
-import extrapiecefromacompletedpuzzle from '../../../public/bgcards/extra-piece-from-a-completed-puzzle.webp'
-import flapmorty from '../../../public/bgcards/flapmorty.webp';
-import formtemplate from '../../../public/bgcards/formtemplate.gif';
-import golenflameemanatingfromtheinnerlight from '../../../public/bgcards/golenflameemanatingfromtheinnerlight.webp';
-import google from '../../../public/bgcards/google.webp';
+/*  import flapmorty from '../../../public/bgcards/flapmorty.webp';
 import halloween from '../../../public/bgcards/halloween.webp';;
-import helptoner from '../../../public/bgcards/helptoner.gif';
-import hihowareyou from '../../../public/bgcards/hihowareyou.webp'; */
+import helptoner from '../../../public/bgcards/helptoner.gif'; */
 import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
-/* import hikari from '/src/assets/bgcards/hikari.webp'; */
 import inwo from '/src/assets/bgcards/illuminati.gif';
 import imageaipro from '/src/assets/bgcards/image-ai-pro.webp';
 import individua from '/src/assets/bgcards/individua.webp';
-/*  import individualandcollectivetimeellipsis from '../../../public/bgcards/invidualandcollectivetimeellipsis.webp';
-import ledzeppelin from '../../../public/bgcards/ledzeppelin.gif';
-import letmeask from '../../../public/bgcards/letmeask.webp';
-import lovelynight from '../../../public/bgcards/lovelynight.webp';
-import mygraphiccardwontstopscreaming from '../../../public/bgcards/mygraphiccardwontstopscreaming.webp'
-import netflix from '../../../public/bgcards/netflix.webp'
-import newdawn from '../../../public/bgcards/newdawn.webp';
-import particledefense from '../../../public/bgcards/particledefense.webp';
-import pinterest from '../../../public/bgcards/pinterest.webp';
-import powerofthepeople from '../../../public/bgcards/powerofthepeople.webp'; */
 import quantumcalc from '/src/assets/bgcards/quantum-calc.webp';
-/* import rickandmorty from '../../../public/bgcards/rickandmorty.gif';
-import soundtracker from '../../../public/bgcards/soundtracker.gif';
-import souzaadv from '../../../public/bgcards/souzaadv.webp';
-import splitmind from '../../../public/bgcards/splitmind.webp';  */
+import soundtracker from '/src/assets/bgcards/soundtracker.gif';
+/* import rickandmorty from '../../../public/bgcards/rickandmorty.gif'; */
 import starsentry from '/src/assets/bgcards/starsentry.webp';
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
 import thedeadgods from '/src/assets/bgcards/the-dead-gods.webp';
-/*  import thetruthdealer from '../../../public/bgcards/thetruthdealer.webp';
-import thewalkingdead from '../../../public/bgcards/thewalkingdead.gif';
-import thingsthatialwayswantedsaytoyou from '../../../public/bgcards/thingsthatialwayswantedsaytoyou.webp';
-import twinsistersfromtheshinning from '../../../public/bgcards/twinsistersfromtheshinning.webp';
-import universallawoflove from '../../../public/bgcards/universal-law-of-love.webp';
-import vercel from '../../../public/bgcards/vercel.webp';
-import verificacaoemail from '../../../public/bgcards/verificacaoemail.gif'; */
+/* import twinsistersfromtheshinning from '../../../public/bgcards/twinsistersfromtheshinning.webp'; */
 import waroftheworlds from '/src/assets/bgcards/war-of-the-worlds.gif';
-/* import wavesofjoy from '../../../public/bgcards/wavesofjoy.webp';
-import youshinelikefireworksonthisemptytown from '../../../public/bgcards/youshinelikefireworksonthisemptytown.webp';
-import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp'; */
+/* import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp'; */
 
 export interface Project {
   id: number;
@@ -148,6 +112,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'Cyberpunk-themed scientific calculator. Designed for both functionality and futuristic aesthetics, it provides an intuitive interface for advanced mathematical operations in a sleek, neon-infused environment.',
     imageUrl: quantumcalc,
     projectUrl: "https://quantum-calc-five.vercel.app"
+  },
+    {
+    name: "Soundtracker",
+    type: 'website',
+    desc: 'A real-news curation of soundtracks for film, TV and games. Headlines, images and links aggregated live from the GDELT Project, a free, keyless global news.',
+    imageUrl: soundtracker,
+    projectUrl: "https://soundtrackernews.vercel.app"
   },
   {
     name: "StarSentry",
