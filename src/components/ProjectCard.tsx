@@ -57,15 +57,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
               <OptimizedImage
                 src={project.imageUrl}
                 alt={project.name}
-                className="h-full w-full transition-transform duration-700 ease-out group-hover:scale-105"
+                className="h-full w-full will-change-transform transition-transform duration-700 ease-in-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0b0613] via-black/20 to-transparent" />
 
-              {/* Scanlines overlay */}
-              <div className="cyber-scanlines pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
-              {/* Light sweep */}
-              <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
+              {/* Glass shine sweep — fades out instantly on leave so it never sweeps backwards */}
+              <div className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 [transition:transform_700ms_ease-out,opacity_150ms_ease] group-hover:translate-x-full group-hover:opacity-100" />
             </div>
 
             <div className="flex flex-col gap-2 p-5">
