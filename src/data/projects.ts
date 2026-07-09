@@ -1,5 +1,5 @@
 /* import spaceoddysey from '/src/assets/bgcards/2001-space-oddysey.gif'; */
-/* import amongus from '../../../public/bgcards/amongus.webp'; */
+import amongus from '/src/assets/bgcards/amongus.gif';
 import beckoned from '/src/assets/bgcards/beckoned.webp';
 import brokenglassshapedofaheart from '/src/assets/bgcards/brokenglassshapedofaheart.webp'; 
 import btocmec from '/src/assets/bgcards/btomec.webp';
@@ -35,6 +35,13 @@ export interface Project {
 }
 
 const projectData: Omit<Project, 'id'>[] = [
+  {
+    name: "Among Us: Start Reactor Mini-Game",
+    type: 'game',
+    desc: 'A browser recreation of the Start Reactor task from Among Us.',
+    imageUrl: amongus,
+    projectUrl: "https://among-us-start-reactor-mini-game.vercel.app/"
+  },
   {
     name: "Beckoned",
     type: 'website',
