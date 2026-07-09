@@ -9,7 +9,8 @@ import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 /*  import cybersnake from '../../../public/bgcards/cybersnake.webp';  */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
-/*  import flapmorty from '../../../public/bgcards/flapmorty.webp';
+import flapmorty from '/src/assets/bgcards/flapmorty.webp';
+/*  
 import halloween from '../../../public/bgcards/halloween.webp';;
 import helptoner from '../../../public/bgcards/helptoner.gif'; */
 import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
@@ -91,6 +92,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'Este projeto explora os impactos ambientais e sociais do lixo eletrônico no mundo moderno.',
     imageUrl: ecotech,
     projectUrl: "https://tonnon.github.io/ecotech/"
+  },
+  {
+    name: "Flap Morty",
+    type: 'game',
+    desc: 'A Flappy Bird-style arcade game starring Butterfly Morty,',
+    imageUrl: flapmorty,
+    projectUrl: "https://flap-morty.vercel.app/"
   },
   {
     name: "Hans Zimmer",
