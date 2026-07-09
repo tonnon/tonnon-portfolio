@@ -1,10 +1,10 @@
-/* import spaceoddysey from '/src/assets/bgcards/2001-space-oddysey.gif'; */
 import amongus from '/src/assets/bgcards/amongus.gif';
 import beckoned from '/src/assets/bgcards/beckoned.webp';
 import brokenglassshapedofaheart from '/src/assets/bgcards/brokenglassshapedofaheart.webp'; 
 import btocmec from '/src/assets/bgcards/btomec.webp';
-import cyberpool from '/src/assets/bgcards/cyberpool.webp';
 import crewcipher from '/src/assets/bgcards/crew-cipher.svg';
+import cyberpool from '/src/assets/bgcards/cyberpool.webp';
+import cybersnake from '/src/assets/bgcards/cybersnake.webp';
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 /*  import cybersnake from '../../../public/bgcards/cybersnake.webp';  */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
@@ -76,6 +76,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'A 2D physics-based pool game with a cyberpunk visual identity, built to match the gameplay feel of 8 Ball Pool.',
     imageUrl: cyberpool,
     projectUrl: "https://cyberpool.vercel.app/"
+  },
+  {
+    name: "CyberSnake",
+    type: 'game',
+    desc: 'A neon-soaked, cyberpunk take on the classic Snake game.',
+    imageUrl: cybersnake,
+    projectUrl: "https://gamecybersnake.vercel.app/"
   },
   {
     name: "CyberTetromino",
