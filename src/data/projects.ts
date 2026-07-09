@@ -3,8 +3,7 @@ import amongus from '../../../public/bgcards/amongus.webp'; */
 import beckoned from '/src/assets/bgcards/beckoned.webp';
 import brokenglassshapedofaheart from '/src/assets/bgcards/brokenglassshapedofaheart.webp'; 
 import btocmec from '/src/assets/bgcards/btomec.webp';
-/* 
-/* import cyberpool from '../../../public/bgcards/cyberpool.webp';  */
+import cyberpool from '/src/assets/bgcards/cyberpool.webp';
 import crewcipher from '/src/assets/bgcards/crew-cipher.svg';
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 /*  import cybersnake from '../../../public/bgcards/cybersnake.webp';  */
@@ -22,7 +21,7 @@ import soundtracker from '/src/assets/bgcards/soundtracker.gif';
 /* import rickandmorty from '../../../public/bgcards/rickandmorty.gif'; */
 import starsentry from '/src/assets/bgcards/starsentry.webp';
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
-import thedeadgods from '/src/assets/bgcards/the-dead-gods.webp';
+import thedeadgods from '/src/assets/bgcards/thedeadgods.gif';
 /* import twinsistersfromtheshinning from '../../../public/bgcards/twinsistersfromtheshinning.webp'; */
 import waroftheworlds from '/src/assets/bgcards/war-of-the-worlds.gif';
 /* import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp'; */
@@ -66,7 +65,14 @@ const projectData: Omit<Project, 'id'>[] = [
     projectUrl: "https://crew-cipher.vercel.app"
   },
   {
-    name: "Cybertetromino",
+    name: "CyberPool",
+    type: 'game',
+    desc: 'A 2D physics-based pool game with a cyberpunk visual identity, built to match the gameplay feel of 8 Ball Pool.',
+    imageUrl: cyberpool,
+    projectUrl: "https://cyberpool.vercel.app/"
+  },
+  {
+    name: "CyberTetromino",
     type: 'game',
     desc: 'Futuristic twist on the classic Tetris game — reimagined with a sleek cyberpunk aesthetic.',
     imageUrl: cybertetromino,
