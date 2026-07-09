@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import ProjectGrid from '@/components/ProjectGrid';
-import StarBackground from '@/components/StarBackground';
 import useInfiniteScroll from '@/hooks/useInfiniteScroll';
 import { projects } from '@/data/projects';
 import Blackhole from '@/components/Blackhole';
+import DigitalRain from '@/components/DigitalRain';
 
 const Index: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('Todos');
@@ -33,10 +33,10 @@ const Index: React.FC = () => {
 
   return (
     <div className="relative min-h-screen text-white">
-      <StarBackground />
-      
-      <Navbar 
-        activeFilter={activeFilter} 
+      <DigitalRain />
+
+      <Navbar
+        activeFilter={activeFilter}
         setActiveFilter={handleFilterChange}
       />
       <Blackhole/>
