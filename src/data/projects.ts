@@ -1,5 +1,5 @@
-/* import spaceoddysey from '/src/assets/bgcards/2001-space-oddysey.gif';
-import amongus from '../../../public/bgcards/amongus.webp'; */
+/* import spaceoddysey from '/src/assets/bgcards/2001-space-oddysey.gif'; */
+/* import amongus from '../../../public/bgcards/amongus.webp'; */
 import beckoned from '/src/assets/bgcards/beckoned.webp';
 import brokenglassshapedofaheart from '/src/assets/bgcards/brokenglassshapedofaheart.webp'; 
 import btocmec from '/src/assets/bgcards/btomec.webp';
@@ -10,9 +10,7 @@ import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
 import flapmorty from '/src/assets/bgcards/flapmorty.webp';
-/*  
-import halloween from '../../../public/bgcards/halloween.webp';;
-import helptoner from '../../../public/bgcards/helptoner.gif'; */
+/*  import helptoner from '../../../public/bgcards/helptoner.gif'; */
 import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
 import inwo from '/src/assets/bgcards/illuminati.gif';
 import imageaipro from '/src/assets/bgcards/image-ai-pro.webp';
