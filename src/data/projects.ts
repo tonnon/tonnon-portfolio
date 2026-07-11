@@ -1,24 +1,23 @@
 import amongus from '/src/assets/bgcards/amongus.gif';
 import beckoned from '/src/assets/bgcards/beckoned.webp';
 import brokenglassshapedofaheart from '/src/assets/bgcards/brokenglassshapedofaheart.webp'; 
-import btocmec from '/src/assets/bgcards/btomec.webp';
+import btocmec from '/src/assets/bgcards/btomec.png';
 import crewcipher from '/src/assets/bgcards/crew-cipher.svg';
 import cyberpool from '/src/assets/bgcards/cyberpool.webp';
 import cybersnake from '/src/assets/bgcards/cybersnake.webp';
 import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
-/*  import cybersnake from '../../../public/bgcards/cybersnake.webp';  */
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
 import flapmorty from '/src/assets/bgcards/flapmorty.webp';
-/*  import helptoner from '../../../public/bgcards/helptoner.gif'; */
 import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
+import helptoner from '/src/assets/bgcards/helptoner.png';
 import inwo from '/src/assets/bgcards/illuminati.gif';
 import imageaipro from '/src/assets/bgcards/image-ai-pro.webp';
 import individua from '/src/assets/bgcards/individua.webp';
 import quantumcalc from '/src/assets/bgcards/quantum-calc.webp';
 import soundtracker from '/src/assets/bgcards/soundtracker.gif';
 /* import rickandmorty from '../../../public/bgcards/rickandmorty.gif'; */
-import starsentry from '/src/assets/bgcards/starsentry.webp';
+import starsentry from '/src/assets/bgcards/starsentry.png';
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
 import thedeadgods from '/src/assets/bgcards/thedeadgods.gif';
 /* import twinsistersfromtheshinning from '../../../public/bgcards/twinsistersfromtheshinning.webp'; */
@@ -118,6 +117,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'A modern, responsive, and cinematic landing page dedicated to Hans Zimmer — one of the most iconic film composers of all time.',
     imageUrl: hanszimmer,
     projectUrl: "https://hans-zimmer-orpin.vercel.app"
+  },
+  {
+    name: "Helptoner",
+    type: 'website',
+    desc: 'Landing page institucional da Helptoner, assistência técnica de impressoras, copiadoras e suprimentos.',
+    imageUrl: helptoner,
+    projectUrl: "https://helptoner.vercel.app/"
   },
   {
     name: "Illuminati: New World Order Online",
