@@ -1,3 +1,4 @@
+import alongnight from '/src/assets/bgcards/a-long-night.webp';
 import amongus from '/src/assets/bgcards/amongus.gif';
 import beckoned from '/src/assets/bgcards/beckoned.webp';
 import brokenglassshapedofaheart from '/src/assets/bgcards/brokenglassshapedofaheart.webp'; 
@@ -34,6 +35,13 @@ export interface Project {
 }
 
 const projectData: Omit<Project, 'id'>[] = [
+  {
+    name: "A Long Night",
+    type: 'game',
+    desc: 'A top-down roguelike wave-shooter for the browser.',
+    imageUrl: alongnight,
+    projectUrl: "https://a-long-night.vercel.app/"
+  },
   {
     name: "Among Us: Start Reactor Mini-Game",
     type: 'game',
