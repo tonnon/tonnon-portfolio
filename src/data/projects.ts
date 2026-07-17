@@ -10,6 +10,7 @@ import cybertetromino from '/src/assets/bgcards/cybertetromino.gif';
 import eclipsers from '/src/assets/bgcards/eclipsers.gif';
 import ecotech from '/src/assets/bgcards/ecotech.gif';
 import flapmorty from '/src/assets/bgcards/flapmorty.webp';
+import gargantua from '/src/assets/bgcards/gargantua.gif';
 import hanszimmer from '/src/assets/bgcards/hans-zimmer.webp'
 import helptoner from '/src/assets/bgcards/helptoner.png';
 import inwo from '/src/assets/bgcards/illuminati.gif';
@@ -17,13 +18,10 @@ import imageaipro from '/src/assets/bgcards/image-ai-pro.webp';
 import individua from '/src/assets/bgcards/individua.webp';
 import quantumcalc from '/src/assets/bgcards/quantum-calc.webp';
 import soundtracker from '/src/assets/bgcards/soundtracker.gif';
-/* import rickandmorty from '../../../public/bgcards/rickandmorty.gif'; */
 import starsentry from '/src/assets/bgcards/starsentry.png';
 import theamazinglooperman from '/src/assets/bgcards/theamazinglooperman.gif';
 import thedeadgods from '/src/assets/bgcards/thedeadgods.gif';
-/* import twinsistersfromtheshinning from '../../../public/bgcards/twinsistersfromtheshinning.webp'; */
 import waroftheworlds from '/src/assets/bgcards/war-of-the-worlds.gif';
-/* import youaretheonlyonewhowantsmearound from '../../../public/bgcards/youre-the-only-one-who-wants-me-around.webp'; */
 
 export interface Project {
   id: number;
@@ -118,6 +116,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'A Flappy Bird-style arcade game starring Butterfly Morty,',
     imageUrl: flapmorty,
     projectUrl: "https://flap-morty.vercel.app/"
+  },
+  {
+    name: "Gargantua",
+    type: 'website',
+    desc: 'An immersive, single-page 3D recreation of the black hole from Interstellar.',
+    imageUrl: gargantua,
+    projectUrl: "https://interstellar-gargantua.vercel.app/"
   },
   {
     name: "Hans Zimmer",
