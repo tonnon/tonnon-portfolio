@@ -16,6 +16,7 @@ import helptoner from '/src/assets/bgcards/helptoner.png';
 import inwo from '/src/assets/bgcards/illuminati.gif';
 import imageaipro from '/src/assets/bgcards/image-ai-pro.webp';
 import individua from '/src/assets/bgcards/individua.webp';
+import oraculo from '/src/assets/bgcards/oraculo.gif';
 import quantumcalc from '/src/assets/bgcards/quantum-calc.webp';
 import soundtracker from '/src/assets/bgcards/soundtracker.gif';
 import starsentry from '/src/assets/bgcards/starsentry.png';
@@ -152,12 +153,19 @@ const projectData: Omit<Project, 'id'>[] = [
     imageUrl: imageaipro,
     projectUrl: "https://image-ai-pro.vercel.app"
   },
-    {
+  {
     name: "Individua",
     type: 'website',
     desc: 'Um sistema de vida gamificado: cada missão concluída (manual ou importada do Trello) vira XP, sobe seus atributos (virtudes), sobe seu rank e enche seu cofre de moedas — trocáveis por recompensas que você mesmo define na Loja do Tempo.',
     imageUrl: individua,
     projectUrl: "https://individua.vercel.app/login"
+  },
+  {
+    name: "ORÁCULO",
+    type: 'website',
+    desc: 'Chat com IA em formato de terminal retrô (tema CRT verde), com efeito de digitação e um assistente com personalidade fixa (system prompt de personagem, não genérico).',
+    imageUrl: oraculo,
+    projectUrl: "https://oraculoai.vercel.app/"
   },
   {
     name: "Quantum Calc",
