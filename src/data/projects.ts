@@ -16,6 +16,7 @@ import helptoner from '/src/assets/bgcards/helptoner.png';
 import inwo from '/src/assets/bgcards/illuminati.gif';
 import imageaipro from '/src/assets/bgcards/image-ai-pro.webp';
 import individua from '/src/assets/bgcards/individua.webp';
+import macrodata from '/src/assets/bgcards/macrodata-refinement.gif';
 import oraculo from '/src/assets/bgcards/oraculo.gif';
 import quantumcalc from '/src/assets/bgcards/quantum-calc.webp';
 import soundtracker from '/src/assets/bgcards/soundtracker.gif';
@@ -159,6 +160,13 @@ const projectData: Omit<Project, 'id'>[] = [
     desc: 'Um sistema de vida gamificado: cada missão concluída (manual ou importada do Trello) vira XP, sobe seus atributos (virtudes), sobe seu rank e enche seu cofre de moedas — trocáveis por recompensas que você mesmo define na Loja do Tempo.',
     imageUrl: individua,
     projectUrl: "https://individua.vercel.app/login"
+  },
+  {
+    name: "Macrodata Refinement",
+    type: 'game',
+    desc: 'A Severance-inspired match-3, played on the Lumon MDR terminal.',
+    imageUrl: macrodata,
+    projectUrl: "https://macrodata-refinement-game.vercel.app/"
   },
   {
     name: "ORÁCULO",
